@@ -15,9 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img alt="Pokémon" width="500px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png"/>
-        </header>
+        <img alt="Pokémon" width="500px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png"/>
         <Login />
       </div>
     );
