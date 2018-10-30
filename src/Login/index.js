@@ -12,15 +12,27 @@ class Login extends Component {
 		}
 	}
 
+	handleInput = (e) => {
+
+		this.setState({
+			[e.currentTarget.name]: e.currentTarget.value
+		});
+	}
+
+	handleLoginSubmit = (e) => {
+		e.preventDefault();
+		console.log(`this.state: `, this.state);
+	}
+
 	render(){
 		return (
 			<Grid container columns={1} textAlign='center' verticalAlign='middle' style={{height: '100%'}}>
 				<Grid.Column style={{maxWidth: 500}}>
 					<Segment>
 						<Form>
-							<Form.Input fluid type='text' name='username' value={this.state.username} placeholder='Username'/>
-							<Form.Input fluid type='password' name='password' value={this.state.password} placeholder='Password'/>
-							<Button fluid type='submit' color='blue' size='large'>Login</Button>
+							<Form.Input onChange={this.handleInput} fluid type='text' name='username' value={this.state.username} placeholder='Username'/>
+							<Form.Input onChange={this.handleInput} fluid type='password' name='password' value={this.state.password} placeholder='Password'/>
+							<Button onClick={this.handleLoginSubmit} fluid type='submit' color='blue' size='large'>Login</Button>
 						</Form>
 					</Segment>
 				</Grid.Column>
