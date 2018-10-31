@@ -63,7 +63,7 @@ class App extends Component {
     return (
       <div className="App">
         <img alt="Pokémon" width="500px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png"/>
-        {this.state.logged ? <div><h1>PokeList</h1><ul><PokeList allPokemon={this.state.pokemon}/></ul></div> : <Login handleLogin={this.handleLogin} />}
+        {this.state.logged ? <div><ul><PokeList allPokemon={this.state.pokemon}/></ul></div> : <Login handleLogin={this.handleLogin} />}
       </div>
     );
   }
